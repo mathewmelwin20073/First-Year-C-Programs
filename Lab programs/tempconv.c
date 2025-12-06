@@ -1,4 +1,4 @@
-// Program to conver temperature from Farenehit to Celsius
+// Program to convert temperature from Farenehit to Celsius
 #include <stdio.h>
 void main()
 {
