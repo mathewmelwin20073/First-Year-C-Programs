@@ -1,1 +1,11 @@
-// Program to cove
+// Program to covert km to cm and ltre to ml
+#include <stdio.h>
+void main()
+{
+int choice;
+float km,cm,litre,ml;
+do{
+printf("Enter:\n 1.To convert km to cm\n 2.To convert l to ml\n 3.To exit\n");
+scanf("%d",&choice);
+switch (choice)
+{
