@@ -1,0 +1,22 @@
+/*Program to calculate electricity bill under the following condition:
+till 100 units, charge is Rs.6.5 per unit
+from 101 to 200 units, charge is Rs.7.5 per unit
+from 201 to 300 units, charge is Rs.10 per unit
+over 300 units, charge is Rs.12 per unit#/
+#include <stdio.h>    
+void main()
+{
+int units;
+float bill=0.0;
+printf("Enter the units consumed:\n");
+scanf("%d",&units);
+if (units<=100)
+bill= 6.5*units;
+else if(units<=200)
+bill=(6.5*100)+(7.5*(units-100));
+else if(units<=300)
+bill=(6.5*100)+(7.5*100)+(10*(units-200));
+else
+bill=(6.5*100)+(7.5*100)+(10*100)+(12*(units-300));
+printf("Bill amount= Rs %f\n",bill);
+}
