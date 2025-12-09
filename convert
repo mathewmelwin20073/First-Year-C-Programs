@@ -9,3 +9,25 @@ printf("Enter:\n 1.To convert km to cm\n 2.To convert l to ml\n 3.To exit\n");
 scanf("%d",&choice);
 switch (choice)
 {
+case 1:
+printf ("Enter the distance in km:\n");
+scanf("%f,&km );
+cm=km/100000.0;
+printf("%f km= %f cm\n");
+break;
+case 2:
+printf ("Enter the volume in litre:\n");
+scanf("%f,&litre );
+ml=litre/1000.0;
+printf("%f litre= %f ml\n");
+break;
+case 3:
+printf("Exited from the program.\n");
+break;
+default:
+printf("Invalid choice!");
+}
+}
+while (choice!=3);
+return 0;
+}
