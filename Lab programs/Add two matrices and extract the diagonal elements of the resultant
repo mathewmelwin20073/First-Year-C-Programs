@@ -1,0 +1,66 @@
+#include <stdio.h>
+int main()
+{
+  int a[20][20],b[20][20],sum[20][20],r1,c1,r2,c2,i,j;
+  printf("Enter the no of rows and columns of the first matrix\n");
+  scanf("%d %d",&r1,&c1);
+  printf("Enter the no of rows and columns of the second matrix\n");
+  scanf("%d %d",&r2,&c2);
+  if(r1==r2 && c1==c2)
+  {
+    printf("Enter the elements of first matrix\n");
+    for(i=0;i<r1;i++)
+    {
+      for(j=0;j<c1;j++)
+      {
+        scanf("%d",&a[i][j]);
+      }
+    }
+    printf("Enter the elements of first matrix\n");
+    for(i=0;i<r2;i++)
+    {
+      for(j=0;j<c2;j++)
+      {
+        scanf("%d",&b[i][j]);
+      }
+    }
+    printf("First matrix:\n");
+    for(i=0;i<r1;i++)
+    {
+      for(j=0;j<c1;j++)
+      {
+        printf("%d\t",a[i][j]);
+      }
+      printf("\n");
+    }
+    printf("Second matrix:\n");
+    for(i=0;i<r2;i++)
+    {
+      for(j=0;j<c2;j++)
+      {
+        printf("%d\t",b[i][j]);
+      }
+      printf("\n");
+    }
+    printf("Resultant matrix:\n");
+    for(i=0;i<r1;i++)
+    {
+      for(j=0;j<c1;j++)
+      {
+        sum[i][j]=a[i][j]+b[i][j];
+        printf("%d\t",sum[i][j]);
+      }
+      printf("\n");
+    }
+    if(c1==r1)
+    {
+      printf("The diagonal elements are:\n");
+      for(i=0;i<r1;i++)
+        printf("%d\t",sum[i][i]);
+    }
+  else
+    printf("Diagonal elements cannot be found\n");
+  }
+else printf("Matrix addition not possible\n");
+return 0;
+}
