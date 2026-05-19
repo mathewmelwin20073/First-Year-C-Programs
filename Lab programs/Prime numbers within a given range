@@ -1,0 +1,34 @@
+#include <stdio.h>
+int check(int s)
+{
+  int i;
+  if (s<2)
+    return 0;
+  for (i=2;i<=s/2;i++)
+  {
+    if(s%i==0)
+    return 0;
+  }
+  return 1;
+}
+void display (int s, int e)
+{
+  int flag;
+  printf("The prime numbers are:\n");
+  for(;s<=e;s++)
+  {
+    flag= check(s);
+    if(flag==1)
+      printf("%d\n",s);
+  }
+}
+int main()
+{
+  int s,e;
+  printf("Enter the range\nStart: ");
+  scanf("%d",&s);
+  printf("End: ");
+  scanf("%d",&e);
+  display(s,e);
+  return 0;
+}
